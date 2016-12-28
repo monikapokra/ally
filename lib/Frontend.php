@@ -11,7 +11,6 @@ class Frontend extends ApiFrontend {
                 'php'=>['shared']
             ))
             ->setBasePath($this->pathfinder->base_location->getPath());
-        asdasdds
         // Might come handy when multi-timezone base networks integrates
         $this->today = date('Y-m-d',strtotime($this->recall('current_date',date('Y-m-d'))));
         $this->now = date('Y-m-d H:i:s',strtotime($this->recall('current_date',date('Y-m-d H:i:s'))));
@@ -20,8 +19,8 @@ class Frontend extends ApiFrontend {
 
         $m = $this->add('Menu',null,'Menu');
         $m->addItem('About','about');
-        $m->addItem('Event','about');
-        $m->addItem('Login');
+        $m->addItem('Event','event');
+        $m->addItem('Login','signin');
         $m->addItem('Help');
     }
 }

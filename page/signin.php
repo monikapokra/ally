@@ -21,4 +21,8 @@ class page_signin extends Page {
 
 	}
 
+	function defaultTemplate(){
+		return['signin'];
+	}
+
 }

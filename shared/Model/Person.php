@@ -9,7 +9,7 @@ class Model_Person extends Model_MyTable{
 		
 		$this->addField('name');
 		$this->addField('password')->type('password');
-		$this->addField('type')->enum(['Student','Teacher']);
+		$this->addField('type')->enum(['Alumni','Student','Faculty']);
 		$this->addField('email');
 		$this->addField('gender')->enum(['Male','Female']);
 		$this->addField('dob')->type('date');
