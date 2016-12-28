@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<html lang="{lang}en{/}">
+  <head>
+    <meta charset="utf-8"><!--[if IE><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <title>{page_title}Untitled Project - Alumni Meet{/}</title>
+    <!--meta(name="desciption" content="{$page_description}")-->{$page_metas}
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="{css}theme.css{/}">
+    <link rel="stylesheet" type="text/css" href="{css}ally.css{/}">
+    {$js_block}
+    {$js_include}
+    <script type="text/javascript">
+      $(function(){
+          {$document_ready}
+      });
+      
+    </script>
+  </head>
+  <body class="{$pagename}">
+    <!--[if lt IE 7]>
+    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    {Layout}
+    <div class="atk-layout allypadding">
+      <div class="atk-layout-row">
+        <div class="atk-wrapper atk-padding-small atk-cells allymenu">
+          <div class="atk-cell atk-valign-middle"><img src="templates/images/logo.jpg" style="background: black"></div>
+          
+            <div class="atk-cell atk-valign-middle atk-size-giga"> MLSU ALUMNI MEET ASSOCIATION
+            </div>
+          <div class="atk-cell atk-align-right allybuttoncolor">{$Menu}</div>
+        </div>
+      </div>
+      <div class="atk-cell atk-valign-middle"><img src="templates/images/college.jpg" style="background: black"></div>
+      <div class="atk-layout-row atk-layout-fluid">
+        <div class="atk-wrapper">{$Content}</div>
+
+          <div class="atk-wrapper atk-align-center">
+             <div class="atk-cell atk-valign-middle"><img src="templates/images/detail.jpg" style="background: black"></div>
+          </div>
+      </div>
+      <div class="atk-layout-row">
+        <div class="atk-wrapper atk-padding-small atk-align-center atk-size-milli atk-cells">
+          <a href="http://agiletoolkit.org/">www.mlsu.ac.in </a>| © copyright2017.
+        </div>
+      </div>
+    </div>{/}
+  </body>
+</html>

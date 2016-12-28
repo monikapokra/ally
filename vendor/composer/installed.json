@@ -1,0 +1,39 @@
+[
+    {
+        "name": "xepan/atk4",
+        "version": "4.3.0",
+        "version_normalized": "4.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xepan/atk4.git",
+            "reference": "558886b227a2a9d760a4aa5636dd344fa62def36"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xepan/atk4/zipball/558886b227a2a9d760a4aa5636dd344fa62def36",
+            "reference": "558886b227a2a9d760a4aa5636dd344fa62def36",
+            "shasum": ""
+        },
+        "time": "2016-05-28 04:40:31",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "": "lib/"
+            },
+            "files": [
+                "/lib/static.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "description": "fork from atk4/atk4",
+        "homepage": "https://agiletoolkit.org/",
+        "keywords": [
+            "atk4",
+            "framework"
+        ]
+    }
+]

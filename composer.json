@@ -1,0 +1,14 @@
+{
+    "name": "rohit/ally",
+    "type": "project",
+    "require": {
+        "xepan/atk4": "4.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rohit Saini",
+            "email": "rohitmlsu@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+.allymenu{
+	color : white;
+	background-color: darkblue;
+}
+
+.allypadding .atk-layout-row .atk-padding-small{ 
+		padding-top: 0.1rem; 
+		padding-bottom: 0.1rem;
+
+}
+
+.allybuttoncolor .atk-swatch-ink{
+	background-color: darkblue;
+}
+/*.ui-tabs .ui-tabs-panel.ui-widget-content.atk-padding-small{*/
