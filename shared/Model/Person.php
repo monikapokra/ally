@@ -9,18 +9,20 @@ class Model_Person extends Model_MyTable{
 		
 		$this->addField('name');
 		$this->addField('password')->type('password');
-		$this->addField('type')->enum(['Alumni','Student','Faculty']);
+		$this->addField('type')->enum(['Student','Faculty']);
 		$this->addField('email');
 		$this->addField('gender')->enum(['Male','Female']);
 		$this->addField('dob')->type('date');
 		$this->addField('address')->type('text');
 		$this->addField('contact_nos');
+		$this->addField('enrollment_no');
 		$this->addField('current_employer');
 		$this->addField('post_name');
 		$this->addField('job_domain');
 		$this->addField('current_city');
 		$this->addField('current_state');
 		$this->addField('current_country');
+		$this->addField('is_admin')->type('boolean')->defaultValue(false)->system(true);
 
 		$this->hasMany('PersonCourse');
 

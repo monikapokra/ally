@@ -24,15 +24,17 @@ class Frontend extends ApiFrontend {
         $m->addItem('Help','help');
 
         $auth = $this->add('Auth');
-        $auth->allowPage(['index','about']);
+        $auth->allowPage(['index','about','registration']);
         $auth->setModel('Person','email','password');
         $auth->check();
 
         if($auth->isLoggedIn()){
+            $m->addItem('Dashboard','dashboard');
             $m->addItem('Profile','profile');
             $m->addItem('Logout','logout');
         }else{
-            $m->addItem('Login','signin');
+            $m->addItem('Login','dashboard');
+            $m->addItem('Register','registration');
         }
 
     }

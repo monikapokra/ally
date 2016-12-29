@@ -1,6 +1,6 @@
 <?php
 
-class page_signin extends Page {
+class page_dashboard extends Page {
 	
 	function init(){
 		parent::init();
@@ -21,8 +21,8 @@ class page_signin extends Page {
 
 	}
 
-	function defaultTemplate(){
-		return['signin'];
-	}
+	// function defaultTemplate(){
+	// 	return['signin'];
+	// }
 
 }
