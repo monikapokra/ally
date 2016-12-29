@@ -15,6 +15,14 @@ class Model_Person extends Model_MyTable{
 		$this->addField('dob')->type('date');
 		$this->addField('address')->type('text');
 		$this->addField('contact_nos');
+		$this->addField('current_employer');
+		$this->addField('post_name');
+		$this->addField('job_domain');
+		$this->addField('current_city');
+		$this->addField('current_state');
+		$this->addField('current_country');
+
+		$this->hasMany('PersonCourse');
 
 		$this->is([
 			'name|to_trim|required',

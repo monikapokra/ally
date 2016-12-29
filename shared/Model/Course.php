@@ -9,6 +9,8 @@ class Model_Course extends Model_MyTable {
 
 		$this->addField('name');
 
+		$this->hasMany('PersonCourse');
+		$this->hasMany('EventCourse');
 
 		$this->is([
 				'name|to_trim|required'

@@ -15,9 +15,9 @@ class page_signin extends Page {
 
 		// $form -> addSubmit('Sign In')->addClass('atk-push-small');
 
-		$this->auth = $this->add('Auth');
-        $this->auth->setModel('Person','email','password');
-        $this->auth->check();
+		// $this->auth = $this->add('Auth');
+  //       $this->auth->setModel('Person','email','password');
+  //       $this->auth->check();
 
 	}
 
