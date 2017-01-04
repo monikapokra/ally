@@ -4,15 +4,23 @@
 			parent::init();
 
 			$m = $form = $this->add('Form');
-			$m->setModel('Person',['type','name','email','password']);
+			$person = $this->add('Model_Person');
 
-			$form->addField('Password','re_password');
+			$m->setModel($person,['type','name','email','password']);
+
+			$form->addField('Password','re_password');				
+			$type_field = $form->getElement('type');
 			$form->addField('enrollment_no');
 			$form->addSubmit('Submit');
 
-			if($form->isSubmitted()){
-			if($form['password'] != $form['re_password'])
-				$form->displayError('re_password','Password must match');
+			$type_field->js(true)->univ()->bindConditionalShow([
+				'Student'=>['name','email','password','re_password','enrollment_no'],
+				'Faculty'=>['name','email','password','re_password']
+			],'div.atk-form-row');
+
+			if($form->isSubmitted()){				
+				if($form['password'] != $form['re_password'])
+					$form->displayError('re_password','Password must match');
 
 				// check for enrollment number validity
 
