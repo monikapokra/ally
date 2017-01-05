@@ -1,6 +1,6 @@
 .allymenu{
 	color : white;
-	background-color: darkblue;
+	background-color: purple;
 }
 
 .allypadding .atk-layout-row .atk-padding-small{ 
@@ -10,6 +10,13 @@
 }
 
 .allybuttoncolor .atk-swatch-ink{
-	background-color: darkblue;
+	background-color: purple;
 }
 /*.ui-tabs .ui-tabs-panel.ui-widget-content.atk-padding-small{*/
+
+.allytoprow{
+	color : white;
+	text-align: center;
+	height: 20%;
+	background-color: darkblue;
+}
