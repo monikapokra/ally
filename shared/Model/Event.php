@@ -10,6 +10,8 @@ class Model_Event extends Model_MyTable {
 		$this->addField('description')->type('text');
 		$this->addField('date')->type('date');
 
+		$this->addExpression('year')->set("YEAR(date)");
+
 
 		$this->is([
 				'name|to_trim|required'
