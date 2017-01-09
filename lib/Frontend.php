@@ -26,6 +26,9 @@ class Frontend extends ApiFrontend {
         $auth = $this->add('Auth');
         $auth->allowPage(['index','about','registration']);
         $auth->setModel('Person','email','password');
+        $auth->addHook('createForm',function($a,$p){
+           $p->add('View')->set('New User Registration Click Here')->addStyle('cursor','pointer')->js('click')->univ()->redirect('registration');
+        });
         $auth->check();
 
         if($auth->isLoggedIn()){

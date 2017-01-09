@@ -8,9 +8,10 @@ class page_profile extends Page{
 		$profile_tab = $tabs->addTab('Profile');
 
 		$user= $this->add('Model_Person')->load($this->app->auth->model->id);
+
 		$form  = $profile_tab->add('Form');
-		$form->setModel($user,['name','type','email','gender','dob','address','contact_nos','enrollment_no','teaching_course','password']);
-		
+		$form->setModel($user,['name','image_id','type','email','gender','dob','address','contact_nos','enrollment_no','teaching_course','password']);
+
 		$type_field = $form->getElement('type');
 		$type_field->js(true)->univ()->bindConditionalShow([
 			'Student'=>['enrollment_no'],
@@ -26,7 +27,7 @@ class page_profile extends Page{
 		if($form->isSubmitted()){
 			if($form['password'] != $form['re_password'])
 				$form->displayError('re_password','Password must match');
-
+			$form->model->getElement('enrollment_no')->destroy();
 			$form->save();
 			$form->js()->univ()->successMessage('Profile detail saved')->execute();
 		}

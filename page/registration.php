@@ -6,11 +6,10 @@
 			$m = $form = $this->add('Form');
 			$person = $this->add('Model_Person');
 
-			$m->setModel($person,['type','name','email','password']);
+			$m->setModel($person,['type','name','email','enrollment_no','password']);
 
 			$form->addField('Password','re_password');				
 			$type_field = $form->getElement('type');
-			$form->addField('enrollment_no');
 			$form->addSubmit('Submit');
 
 			$type_field->js(true)->univ()->bindConditionalShow([
@@ -25,7 +24,7 @@
 				// check for enrollment number validity
 
 				$form->save();
-				$form->js()->univ()->successMessage('Successfully registered')->execute();
+				$form->js(null,$form->js()->univ()->redirect('dashboard'))->univ()->successMessage('Successfully registered')->execute();
 			}
 		}
 	}

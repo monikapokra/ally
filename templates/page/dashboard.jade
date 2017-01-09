@@ -1,0 +1,14 @@
+.page(id="{$_name}")
+	.atk-row
+		.atk-col-2
+			img(src="{$image}")
+			br
+			| Hello {$name},
+			br
+			| You have {$unread_message_count} unread messages.
+		.atk-col-10
+			h3 Your Messages
+			{$messages}
+			br
+			h3 Compose a message
+			{$new_message_form}

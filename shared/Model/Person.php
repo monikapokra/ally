@@ -8,6 +8,7 @@ class Model_Person extends Model_MyTable{
 		parent::init();
 		
 		$this->addField('name');
+		$this->add('filestore/Field_Image','image_id');
 		$this->addField('password')->type('password');
 		$this->addField('type')->enum(['Student','Faculty']);
 		$this->addField('email');
@@ -26,6 +27,10 @@ class Model_Person extends Model_MyTable{
 		$this->addField('is_admin')->type('boolean')->defaultValue(false)->system(true);
 
 		$this->hasMany('PersonCourse');
+
+		$this->addExpression('unread_message_count')->set(function($m,$q){
+			return '"0"';
+		});
 
 		$this->is([
 			'name|to_strip_extra_space|to_trim|required|alphaspace',
@@ -55,6 +60,17 @@ class Model_Person extends Model_MyTable{
 	
 		if(strlen(trim($this['address'])) >0 AND strlen(trim($this['address']))<=20)
 			throw $this->exception('Address must be of length 20 or more','ValidityCheck')->setField('address');
+
+		if($this['type']=='Student'){
+			$old_student = $this->add('Model_Person')
+								->addCondition('enrollment_no',$this['enrollment_no'])
+								->addCondition('id','<>',$this->id)
+								->tryLoadAny();
+			if($old_student->loaded()){
+				throw $this->exception('This enrollment number is already in system.','ValidityCheck')->setField('enrollment_no');
+			}
+			
+		}
 		
 	}
 }

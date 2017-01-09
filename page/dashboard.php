@@ -4,25 +4,61 @@ class page_dashboard extends Page {
 	
 	function init(){
 		parent::init();
-	
-		/**For add in template**/
-		// $this->add('View')->set('New User?');
 		
-		// $form = $this->add('Form');
+		$this->app->auth->model->reload();
+		$this->setModel($this->app->auth->model);
 
-		// $form -> addField('email')->validate('required');
-		// $form -> addField('password','password')->validate('required');
+		$tabs = $this->add('Tabs',null,'messages');
 
-		// $form -> addSubmit('Sign In')->addClass('atk-push-small');
+		$in_tab = $tabs->addTab('Inbox');
+		$sent_tab = $tabs->addTab('Sent');
 
-		$this->auth = $this->add('Auth');
-        $this->auth->setModel('Person','email','password');
-        $this->auth->check();
+		$my_in_message = $this->add('Model_Message');
+		$my_in_message->addCondition('to_id',$this->app->auth->model->id);
+
+		$my_sent_message = $this->add('Model_Message');
+		$my_sent_message->addCondition('from_id',$this->app->auth->model->id);
+
+		$m_in_grid = $in_tab->add('Grid');
+		$m_in_grid->setModel($my_in_message,['from','message','created_at']);
+
+		$m_sent_grid = $sent_tab->add('Grid');
+		$m_sent_grid->setModel($my_sent_message,['to','message','created_at','is_read']);
+
+		$m_form = $this->add('Form',null,'new_message_form',['form/stacked']);
+		$btn_set = $m_form->add('ButtonSet');
+		$student_btn = $btn_set->addButton('To Student');
+		$faculty_btn = $btn_set->addButton('To Faculty');
+		$m_form->add('View')->addClass('selected_person')->set('Select Any Person');
+		$m_form->addField('Hidden','to_person_id')->addClass('selected_person_id');
+		$m_form->addField('Text','message');
+		$m_form->addSubmit('Send');
+
+		if($student_btn->isClicked()){
+			$this->js()->univ()->frameURL('Find Student',$this->app->url('findStudent'))->execute();
+		}
+
+		if($faculty_btn->isClicked()){
+			$this->js()->univ()->frameURL('Find Faculty',$this->app->url('findFaculty'))->execute();
+		}
+
+		if($m_form->isSubmitted()){
+
+			$message = $this->add('Model_Message');
+			$message['from_id']=  $this->app->auth->model->id;
+			$message['to_id']=  $m_form['to_person_id'];
+			$message['message'] = $m_form['message'];
+			$message->save();
+
+			$m_form->js(null,[$m_in_grid->js()->reload(),$m_sent_grid->js()->reload()])->univ()->successMessage('Message Sent')->execute();
+
+		}
+
 
 	}
 
-	// function defaultTemplate(){
-	// 	return['signin'];
-	// }
+	function defaultTemplate(){
+		return ['page/dashboard'];
+	}
 
 }
