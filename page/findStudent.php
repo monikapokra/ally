@@ -4,6 +4,8 @@ class page_findStudent extends Page {
 	function init(){
 		parent::init();
 
+		$this->app->stickyGET('profile_page');
+
 		$form = $this->add('Form')->addClass('ignore_changes');
 
 		$s_grid = $this->add('Grid');
@@ -39,9 +41,14 @@ class page_findStudent extends Page {
 		$s_grid->setModel($s_m,['name','enrollment_no','from_year','to_year']);
 
 		$s_grid->on('click','tr',function($js,$data){
-			$student = $this->add('Model_Person')->load($data['id']);
-			$str = $student['name']. ' ('.$student['enrollment_no'].')';
-			return [$js->_selector('.selected_person')->html($str),$this->js()->_selector('.selected_person_id')->val($data['id']),$this->js()->univ()->closeDialog()];
+			if($_GET['profile_page']){	
+				$this->app->memorize('profile_id',$data['id']);
+				return [$js->_selector('.profile_view')->trigger('reload'),$this->js()->univ()->closeDialog()];
+			}else{
+				$student = $this->add('Model_Person')->load($data['id']);
+				$str = $student['name']. ' ('.$student['enrollment_no'].')';
+				return [$js->_selector('.selected_person')->html($str),$this->js()->_selector('.selected_person_id')->val($data['id']),$this->js()->univ()->closeDialog()];
+			}
 		});
 
 		if($form->isSubmitted()){

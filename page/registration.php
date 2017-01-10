@@ -21,6 +21,8 @@
 				if($form['password'] != $form['re_password'])
 					$form->displayError('re_password','Password must match');
 
+				if($form['type']=='Student' && !$form['enrollment_no'])
+					$form->displayError('enrollment_no','Please provide enrollment number.');
 				// check for enrollment number validity
 
 				$form->save();

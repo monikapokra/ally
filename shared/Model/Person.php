@@ -29,7 +29,9 @@ class Model_Person extends Model_MyTable{
 		$this->hasMany('PersonCourse');
 
 		$this->addExpression('unread_message_count')->set(function($m,$q){
-			return '"0"';
+			return $this->add('Model_Message')
+						->addCondition('to_id',$q->getField('id'))
+						->addCondition('is_read',false)->count();
 		});
 
 		$this->is([

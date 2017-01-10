@@ -17,4 +17,9 @@ class Model_Message extends Model_MyTable {
 
 		$this->add('dynamic_model/Controller_AutoCreator');
 	}
+
+	function markRead(){
+		$this['is_read']= true;
+		$this->save();
+	}
 }

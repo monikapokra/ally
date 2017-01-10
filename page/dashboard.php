@@ -20,7 +20,15 @@ class page_dashboard extends Page {
 		$my_sent_message->addCondition('from_id',$this->app->auth->model->id);
 
 		$m_in_grid = $in_tab->add('Grid');
-		$m_in_grid->setModel($my_in_message,['from','message','created_at']);
+		$m_in_grid->setModel($my_in_message,['created_at','from']);
+
+		$m_in_grid->addColumn('button','read');
+
+		if($id = $_GET['read']){
+			$read_message_m = $this->add('Model_Message')->load($id);
+			$read_message_m->markRead();
+			$this->js()->univ()->dialogOK('Message',$read_message_m['message'])->execute();
+		}
 
 		$m_sent_grid = $sent_tab->add('Grid');
 		$m_sent_grid->setModel($my_sent_message,['to','message','created_at','is_read']);
@@ -54,6 +62,7 @@ class page_dashboard extends Page {
 
 		}
 
+		$this->add('Button',null,'edit_profile_btn')->set('Edit Profile')->js('click')->univ()->redirect('editprofile');
 
 	}
 

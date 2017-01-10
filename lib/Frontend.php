@@ -33,7 +33,7 @@ class Frontend extends ApiFrontend {
 
         if($auth->isLoggedIn()){
             $m->addItem('Dashboard','dashboard');
-            $m->addItem('Profile','profile');
+            $m->addItem('Search','searchprofile');
             $m->addItem('Logout','logout');
         }else{
             $m->addItem('Login','dashboard');

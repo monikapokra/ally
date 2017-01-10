@@ -4,6 +4,8 @@ class page_findFaculty extends Page {
 	function init(){
 		parent::init();
 
+		$this->app->stickyGET('profile_page');
+
 		$form = $this->add('Form');
 
 		$f_grid = $this->add('Grid');
@@ -40,9 +42,14 @@ class page_findFaculty extends Page {
 		$f_grid->setModel($f_m,['name']);
 
 		$f_grid->on('click','tr',function($js,$data){
-			$faculty = $this->add('Model_Person')->load($data['id']);
-			$str = $faculty['name'];
-			return [$js->_selector('.selected_person')->html($str),$this->js()->_selector('.selected_person_id')->val($data['id'])];
+			if($_GET['profile_page']){
+				$this->app->memorize('profile_id',$data['id']);
+				return [$js->_selector('.profile_view')->trigger('reload'),$this->js()->univ()->closeDialog()];
+			}else{
+				$faculty = $this->add('Model_Person')->load($data['id']);
+				$str = $faculty['name'];
+				return [$js->_selector('.selected_person')->html($str),$this->js()->_selector('.selected_person_id')->val($data['id'])];
+			}
 		});
 
 		if($form->isSubmitted()){

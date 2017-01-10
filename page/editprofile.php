@@ -1,6 +1,6 @@
 <?php
 
-class page_profile extends Page{
+class page_editprofile extends Page{
 	function init(){
 		parent::init();
 
