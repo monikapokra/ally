@@ -1,4 +1,22 @@
-
-<div id="{$_name}" class="profile_view">{$name}<br/>
-  <div class="atk-effect-success">{$type}</div>
+<div id="{$_name}" class="profile_view">
+	<img src="	{$image}" />
+	<div class="atk-effect-success">{$type}</div>
+	<div class="profile_view">
+		{$name}
+	</div>
+	<h6><b>Email Id: </b>
+		<div class="atk-effect-info">{$email}</div></h6>
+	<h6><b>Contact No.: </b>
+		<div class="atk-effect-info">{$contact_nos}</div></h6>
+  
 </div>
+<div>
+	<h6><b>Date Of Birth: </b>{$dob}</h6>
+	<h6><b>Employed: </b>{$current_employer}</h6>
+	<h6><b>Job Domain: </b>{$job_domain}</h6>
+	<h6><b>Current City/State: </b>{$current_city},{$current_state}</h6>
+</div>
+
+
+
+
