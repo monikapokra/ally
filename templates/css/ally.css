@@ -1,0 +1,99 @@
+.allymenu{
+  color : white;
+  background-color: purple;
+}
+
+.allypadding .atk-layout-row .atk-padding-small{ 
+    padding-top: 0.1rem; 
+    padding-bottom: 0.1rem;
+
+}
+
+.allybuttoncolor .atk-swatch-ink{
+  background-color: purple;
+}
+
+.allybuttoncolor ul li {
+  margin-left: 50px !important;
+}
+/*.ui-tabs .ui-tabs-panel.ui-widget-content.atk-padding-small{*/
+
+.allytoprow{
+  color : white;
+  text-align: center;
+  height: 20%;  
+  background-color:  #f7dc6f ;
+}
+
+.allybody {
+    /*background-image: url("templates/images/backimage.jpe");*/
+    width: 100%;
+}
+
+.gradient {
+
+  /* can be treated like a fallback */
+  background-color: darkblue;
+
+  /* will be "on top", if browser supports it */
+  background-image: linear-gradient(darkblue, blue);
+
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  background: darkblue;
+  background: linear-gradient(darkblue, blue);
+
+}
+
+
+.page_about {
+  background-image: url('../images/transimage.jpg') ! important;
+
+}
+
+.ally-link-footer{
+  background-color: darkblue;
+  background-image: linear-gradient(darkblue, blue);
+  background: darkblue;
+    background: linear-gradient(darkblue, blue);
+    margin-top: 20px;
+    padding-top: 20px;
+    color : white;
+}
+
+.ally-bottom-footer{
+  border-top: 1px solid white;
+  margin-top: 10px;
+  padding-top: 10px;
+  color: white;
+
+   
+    overflow: hidden;
+}
+.carousel .item {
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+.carousel .active.left, .carousel .active.right {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+.carousel .next, .carousel .prev {
+    left:0;
+    opacity:1;
+    z-index:1;
+}
+.item:nth-child(1) {
+  background: darkred;
+}
+
+.item:nth-child(2) {
+  background: red;
+}
+
+.item:nth-child(3) {
+  background: orange;
+}
