@@ -64,10 +64,7 @@
   border-top: 1px solid white;
   margin-top: 10px;
   padding-top: 10px;
-  color: white;
-
-   
-    overflow: hidden;
+  overflow: hidden;
 }
 .carousel .item {
     -webkit-transition: opacity 1s;

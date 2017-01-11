@@ -6,7 +6,7 @@ class View_Profile extends View {
 		$id=$this->app->recall('profile_id',false);
 		
 		if(!$id){
-			$this->add('View')->set('Please select');
+			// $this->add('View')->set('Please select');
 			return;
 		}
 		
