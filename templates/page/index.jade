@@ -1,0 +1,30 @@
+.container
+  .row
+      #myCarousel.carousel.slide
+        // Dot Indicators
+        ol.carousel-indicators
+          li.active(data-target='#myCarousel', data-slide-to='0')
+          |     
+          li(data-target='#myCarousel', data-slide-to='1')
+          |     
+          li(data-target='#myCarousel', data-slide-to='2')
+        // Items
+        .carousel-inner
+          .active.item
+            img.img-responsive(src='templates/images/collage.jpeg')
+          |     
+          .item
+            img.img-responsive(src='templates/images/mlsu.jpeg')
+          |     
+          .item
+            img.img-responsive(src='templates/images/vb.jpeg')
+        // Navigation
+        a.left.carousel-control(href='#myCarousel', data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        |         
+        a.right.carousel-control(href='#myCarousel', data-slide='next')
+          span.glyphicon.glyphicon-chevron-right          
+    .atk-wrapper.atk-align-center
+    .atk-cell.atk-valign-middle
+      
+        img(src='templates/images/detail.jpg', style='background: black')
