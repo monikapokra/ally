@@ -8,8 +8,9 @@
     <!--meta(name="desciption" content="{$page_description}")-->{$page_metas}
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory-->
     <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" type="text/css" href="{css}theme.css{/}">
-    <link rel="stylesheet" type="text/css" href="{css}ally.css{/}">
+  <link rel="stylesheet" type="text/css" href="{css}bootstrap/css/bootstrap.min.css{/}">
+  <link rel="stylesheet" type="text/css" href="{css}theme.css{/}">
+  <link rel="stylesheet" type="text/css" href="{css}ally.css{/}">
     {$js_block}
     {$js_include}
     <script type="text/javascript">
@@ -18,6 +19,7 @@
       });
       
     </script>
+  <script type="text/javascript" src="templates/css/bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body class="{$pagename}">
     <!--[if lt IE 7]>
@@ -47,8 +49,34 @@
       <div class="atk-layout-row ">
         <div class="atk-wrapper">{$Content}</div>
       </div>
+
+      <div class="container">
+  <div class="row">
+  <div id="myCarousel" class="carousel  slide">
+  <!-- Dot Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <!-- Items -->
+  <div class="carousel-inner">
+    <div class="active item">  <img src="templates/images/college.jpg" class="img-responsive"></div>
+    <div class="item">  <img src="templates/images/mlsu.jpeg" class="img-responsive"></div>
+    <div class="item">  <img src="templates/images/vb.jpeg" class="img-responsive"></div>
+  </div>
+  <!-- Navigation -->
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+</div>
+  </div>
+</div>
+
       <div class="atk-layout-row">
-       
           <div class="atk-wrapper atk-align-center">
              <div class="atk-cell atk-valign-middle"><img src="templates/images/detail.jpg" style="background: black"></div>
           </div>
@@ -58,4 +86,9 @@
       </div>
     </div>{/}
   </body>
+  <script type="text/javascript">
+     $(document).ready(function() {
+      $('.carousel').carousel({interval: 4000});
+    });
+  </script>
 </html>
