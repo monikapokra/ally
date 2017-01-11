@@ -19,7 +19,7 @@
       });
       
     </script>
-  <script type="text/javascript" src="templates/css/bootstrap/js/bootstrap.min.js"></script>
+  <!-- <script type="text/javascript" src="templates/css/bootstrap/js/bootstrap.min.js"></script> -->
   </head>
   <body class="{$pagename}">
     <!--[if lt IE 7]>
@@ -49,6 +49,23 @@
       <div class="row">
         <div class="atk-wrapper">{$Content}</div>
       </div>
+      <footer class="ally-link-footer">
+          <div class= "container">
+              <div class= "row">
+                  <h4><b>Carrer</b></h4>
+              </div>
+              <div class="ally-bottom-footer">
+                  <div class="col-md-3">
+                      <ul>
+                        <li>
+                          <span>Notes:</span><br/>
+                          <a href="mailto:info@mlsunotes.org">info@mlsunotes.org</a>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+      </footer>
       <div class="atk-layout-row">
         <div class="atk-wrapper atk-align-center atk-size-milli atk-cells">
           <a href="https://www.mlsu.ac.in">www.mlsu.ac.in </a>| © copyright2017.
@@ -56,9 +73,4 @@
       </div>
     </div>{/}
   </body>
-  <script type="text/javascript">
-     $(document).ready(function() {
-      $('.carousel').carousel({interval: 3500});
-    });
-  </script>
 </html>

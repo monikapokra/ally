@@ -1,3 +1,13 @@
+<link rel="stylesheet" type="text/css" href="{css}bootstrap/css/bootstrap.min.css{/}">
+ {$js_block}
+    {$js_include}
+    <script type="text/javascript">
+      $(function(){
+          {$document_ready}
+      });
+      
+    </script>
+  <script type="text/javascript" src="templates/css/bootstrap/js/bootstrap.min.js"></script>
 
 <div class="container">
   <div class="row">
@@ -22,3 +32,8 @@
     <div class="atk-cell atk-valign-middle"><img src="templates/images/detail.jpg" style="background: black"/></div>
   </div>
 </div>
+<script type="text/javascript">
+     $(document).ready(function() {
+      $('.carousel').carousel({interval: 3500});
+    });
+  </script>
