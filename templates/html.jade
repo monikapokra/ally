@@ -1,0 +1,102 @@
+doctype //if lt IE 7
+html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+html(lang='{lang}en{/}')
+  head
+    meta(charset='utf-8')
+    //if IE><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif
+      | [if IE&gt;
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |     
+    title {page_title}MLSU Alumni Association{/}
+    // meta(name="desciption" content="{$page_description}")
+    | {$page_metas}
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    // <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,700" rel="stylesheet" type="text/css">
+    link(rel='stylesheet', type='text/css', href='{css}bootstrap/css/bootstrap.min.css{/}')
+    |     
+    link(rel='stylesheet', type='text/css', href='{css}theme.css{/}')
+    |     
+    link(rel='stylesheet', type='text/css', href='{css}ally.css{/}')
+    |     {$js_block}
+    |     {$js_include}
+    |     
+    script(type='text/javascript').
+      $(function(){
+      {$document_ready}
+      });
+  |   
+  body(class='{$pagename}')
+    //if lt IE 7
+      p.chromeframe
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  or 
+        a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
+        |  to improve your experience.
+    |     {Layout}
+    |     
+    .atk-layout
+      .atk-layout-row
+        .atk-wrapper.atk-cells
+          .atk-row
+            .atk-cell.atk-valign-middle(style='float:left')
+              img(src='templates/images/finaltop.jpg')
+      .atk-wrapper.atk-cells.allymenu
+        .atk-cell.atk-cells-gutter-large.allybuttoncolor {$Menu}
+      .atk-layout-row
+        .atk-wrapper {$Content}
+      |       
+      .atk-layout-row
+        #footer
+          #footer_left.row
+            .column.large-3.small-12
+              .footer_section
+                a.footer_section_header(href='#')
+                  i.fa.fa-bookmark-o
+                  |                   
+                  span Careers
+                |                 
+                ul.vertical
+                  li
+                    span Email:
+                    |                     
+                    br
+                    |                     
+                    a(href='mailto:info@nitiealumni.org') info@mlsualumni.org
+            |             
+            .column.large-3.small-12
+              #footer_contact.footer_section
+                a.footer_section_header(href='#')
+                  i.fa.fa-envelope-o
+                  |                   Contact
+                |                 
+                ul.vertical
+                  li
+                    span Email:
+                    |                     
+                    br
+                    |                     
+                    a(href='mailto:info@nitiealumni.org') info@mlsulumni.org
+                  |                     
+                  li
+                    span Phone:
+                    |                       
+                    br
+                    |                       
+                    a(href='tel:+91 8955616629') +91 8955616629
+                    |                       
+                    a(href='tel:+91 7790878888') +91 7790878888
+        //
+          <div class="atk-wrapper atk-align-center">
+          <div class="atk-cell atk-valign-middle"><img src="templates/images/detail.jpg" style="background: black"></div>
+          </div>
+        .atk-wrapper.atk-align-center.atk-size-milli.atk-cells
+          a(href='https://www.mlsu.ac.in') www.mlsu.ac.in 
+          | | &copy; copyright2017.
+    | {/}

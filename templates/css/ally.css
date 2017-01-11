@@ -33,19 +33,37 @@
 .gradient {
 
   /* can be treated like a fallback */
-  background-color: blue;
+  background-color: darkblue;
 
   /* will be "on top", if browser supports it */
-  background-image: linear-gradient(blue, white);
+  background-image: linear-gradient(darkblue, blue);
 
   /* these will reset other properties, like background-position, but it does know what you mean */
-  background: blue;
-  background: linear-gradient(blue, white);
+  background: darkblue;
+  background: linear-gradient(darkblue, blue);
 
 }
 
 
 .page_about {
 	background-image: url('../images/transimage.jpg') ! important;
+
+}
+
+.ally-link-footer{
+	background-color: darkblue;
+	background-image: linear-gradient(darkblue, blue);
+	background: darkblue;
+  	background: linear-gradient(darkblue, blue);
+  	margin-top: 20px;
+  	padding-top: 20px;
+  	color : white;
+}
+
+.ally-bottom-footer{
+	border-top: 1px solid white;
+	margin-top: 10px;
+	padding-top: 10px;
+	color: white;
 
 }
