@@ -26,7 +26,6 @@
 }
 
 .allybody {
-    /*background-image: url("templates/images/backimage.jpe");*/
     width: 100%;
 }
 
@@ -44,28 +43,19 @@
 
 }
 
-
-.page_about {
-  background-image: url('../images/transimage.jpg') ! important;
-
-}
-
 .ally-link-footer{
-  background-color: darkblue;
-  background-image: linear-gradient(darkblue, blue);
-  background: darkblue;
-    background: linear-gradient(darkblue, blue);
     margin-top: 20px;
     padding-top: 20px;
     color : white;
 }
 
-.ally-bottom-footer{
-  border-top: 1px solid white;
-  margin-top: 10px;
-  padding-top: 10px;
-  overflow: hidden;
-}
+/*.footer-nav li{
+  display: inline;
+  text-align: center;
+  list-style: none;
+  padding: 50px 80px;
+}*/
+
 .carousel .item {
     -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
