@@ -3,7 +3,7 @@
 		function init(){
 			parent::init();
 
-			$m = $form = $this->add('Form');
+			$m = $form = $this->add('Form',null,'form');
 			$person = $this->add('Model_Person');
 
 			$m->setModel($person,['type','name','email','enrollment_no','password']);
@@ -29,4 +29,8 @@
 				$form->js(null,$form->js()->univ()->redirect('dashboard'))->univ()->successMessage('Successfully registered')->execute();
 			}
 		}
+
+	function defaultTemplate(){
+		return['page/registration'];
+	}	
 	}

@@ -23,6 +23,7 @@ class Frontend extends ApiFrontend {
         $m->addItem('Event','event');
         $m->addItem('Help','help');
 
+        
         $auth = $this->add('Auth');
         $auth->allowPage(['index','about','registration']);
         $auth->setModel('Person','email','password');
