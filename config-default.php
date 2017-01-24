@@ -11,5 +11,18 @@ $config['url_postfix']='';
 
 $config['dsn']='mysql://root:@localhost/ally';
 
+// $config['tmail']['transport']='phpmailer';
 $config['tmail']['transport']='Echo';
 $config['tmail']['from']='no-reply@mlsualumni.com';
+
+$config['tmail']['phpmailer'] = [
+
+    'encryption'=>'tsl',   // only smtp-tsl is supported currently
+    'username'=>'email@username.com',
+    'password'=>'password',
+    'host'=>'mail.host.com',
+    'from_email'=>'no-reply@mlsualumni.com',
+    'from_name'=>'Ally Admin',
+
+    // optional: 'port'=>'smtp port',
+];
