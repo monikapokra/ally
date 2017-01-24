@@ -27,9 +27,9 @@ class Frontend extends ApiFrontend {
         $auth = $this->add('MyAuth');
         $auth->allowPage(['index','about','registration','forgotpassword']);
         $auth->setModel('Person','email','password');
-        // $auth->addHook('createForm',function($a,$p){
-        //    $p->add('View')->set('New User Registration Click Here')->addStyle('cursor','pointer')->js('click')->univ()->redirect('registration');
-        // });
+        $auth->addHook('createForm',function($a,$p){
+           $p->js(true)->_selector('.atk-content')->addClass('bgimage');
+        });
         $auth->check();
 
         if($auth->isLoggedIn()){

@@ -28,9 +28,10 @@
 				$form->save();
 				$form->js(null,$form->js()->univ()->redirect('dashboard'))->univ()->successMessage('Successfully registered')->execute();
 			}
+			$this->js(true)->_selector('.atk-content')->addClass('bgimage');
 		}
 
 	function defaultTemplate(){
 		return['page/registration'];
 	}	
-	}
+}
