@@ -3,7 +3,13 @@
 	function init(){
 		parent::init();
 
-		$form = $this->add('Form');
+		$this->add('View')->setElement('H2')->set('Events');
+
+
+		$cols =$this->add('Columns');
+		$col_1 = $cols->addColumn(6);
+
+		$form = $col_1->add('Form');
 		$grid = $this->add('Grid');
 		$year_field = $form->addField('DropDown','filter_events')->setValueList(['All','2016'=>'2016','2017'=>'2017']);
 		$year_field->js('change',$form->js()->submit());

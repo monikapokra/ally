@@ -872,6 +872,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/lib\/MyAuth.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/lib\/MyAuth.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/lib\/View\/Profile.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -931,6 +940,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/page\/findStudent.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/page\/forgotpassword.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page\/forgotpassword.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1303,6 +1321,75 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/templates\/css\/bootstrap\/css\/bootstrap-theme.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/css\/bootstrap-theme.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/css\/bootstrap\/css\/bootstrap-theme.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/css\/bootstrap-theme.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/css\/bootstrap\/css\/bootstrap.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/css\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/css\/bootstrap\/css\/bootstrap.min.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/css\/bootstrap.min.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/css\/bootstrap\/js\/bootstrap.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/bootstrap.js",
+		"outputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/min\/bootstrap-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/templates\/css\/bootstrap\/js\/bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/min\/bootstrap.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/templates\/css\/bootstrap\/js\/npm.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/npm.js",
+		"outputAbbreviatedPath": "\/templates\/css\/bootstrap\/js\/min\/npm-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/templates\/html.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1312,68 +1399,57 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/templates\/images\/college.jpg": {
+	"\/templates\/images\/bottom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 188877,
-		"inputAbbreviatedPath": "\/templates\/images\/college.jpg",
-		"outputAbbreviatedPath": "\/templates\/images\/college.jpg",
+		"initialSize": 252894,
+		"inputAbbreviatedPath": "\/templates\/images\/bottom.jpg",
+		"outputAbbreviatedPath": "\/templates\/images\/bottom.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/templates\/images\/detail.JPG": {
+	"\/templates\/images\/collage.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 11160,
-		"inputAbbreviatedPath": "\/templates\/images\/detail.JPG",
-		"outputAbbreviatedPath": "\/templates\/images\/detail.JPG",
+		"initialSize": 184355,
+		"inputAbbreviatedPath": "\/templates\/images\/collage.jpeg",
+		"outputAbbreviatedPath": "\/templates\/images\/collage.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/templates\/images\/domain.JPG": {
+	"\/templates\/images\/finaltop.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 32067,
-		"inputAbbreviatedPath": "\/templates\/images\/domain.JPG",
-		"outputAbbreviatedPath": "\/templates\/images\/domain.JPG",
+		"initialSize": 71128,
+		"inputAbbreviatedPath": "\/templates\/images\/finaltop.jpg",
+		"outputAbbreviatedPath": "\/templates\/images\/finaltop.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/templates\/images\/events.JPG": {
+	"\/templates\/images\/mlsu.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 15922,
-		"inputAbbreviatedPath": "\/templates\/images\/events.JPG",
-		"outputAbbreviatedPath": "\/templates\/images\/events.JPG",
+		"initialSize": 156108,
+		"inputAbbreviatedPath": "\/templates\/images\/mlsu.jpeg",
+		"outputAbbreviatedPath": "\/templates\/images\/mlsu.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/templates\/images\/logo.jpg": {
+	"\/templates\/images\/vb.jpeg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 22601,
-		"inputAbbreviatedPath": "\/templates\/images\/logo.jpg",
-		"outputAbbreviatedPath": "\/templates\/images\/logo.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/templates\/images\/transimage.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 175514,
-		"inputAbbreviatedPath": "\/templates\/images\/transimage.jpg",
-		"outputAbbreviatedPath": "\/templates\/images\/transimage.jpg",
+		"initialSize": 111075,
+		"inputAbbreviatedPath": "\/templates\/images\/vb.jpeg",
+		"outputAbbreviatedPath": "\/templates\/images\/vb.jpeg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1398,35 +1474,82 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/templates\/view\/profile.jade": {
+	"\/templates\/page\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/page\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/page\/index.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/templates\/view\/profile.jade",
-		"outputAbbreviatedPath": "\/templates\/view\/profile.html",
+		"inputAbbreviatedPath": "\/templates\/page\/index.jade",
+		"outputAbbreviatedPath": "\/templates\/page\/index.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
 		},
-	"\/upload\/0\/20170109115213_0_12716094-10208536574721587-1988409493715233666-o.jpg": {
-		"fileType": 16384,
+	"\/templates\/page\/mylogin.html": {
+		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 14364,
-		"inputAbbreviatedPath": "\/upload\/0\/20170109115213_0_12716094-10208536574721587-1988409493715233666-o.jpg",
-		"outputAbbreviatedPath": "\/upload\/0\/20170109115213_0_12716094-10208536574721587-1988409493715233666-o.jpg",
+		"inputAbbreviatedPath": "\/templates\/page\/mylogin.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/page\/registration.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/page\/registration.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/templates\/page\/registration.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/page\/registration.jade",
+		"outputAbbreviatedPath": "\/templates\/page\/registration.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/templates\/view\/profile.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/view\/profile.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/upload\/0\/20170124111803_0_funding-angels-2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 198985,
+		"inputAbbreviatedPath": "\/upload\/0\/20170124111803_0_funding-angels-2.png",
+		"outputAbbreviatedPath": "\/upload\/0\/20170124111803_0_funding-angels-2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/upload\/0\/20170109115213_1_thumb-12716094-10208536574721587-1988409493715233666-o.jpg": {
-		"fileType": 16384,
+	"\/upload\/0\/20170124111803_1_thumb-funding-angels-2.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 7762,
-		"inputAbbreviatedPath": "\/upload\/0\/20170109115213_1_thumb-12716094-10208536574721587-1988409493715233666-o.jpg",
-		"outputAbbreviatedPath": "\/upload\/0\/20170109115213_1_thumb-12716094-10208536574721587-1988409493715233666-o.jpg",
+		"initialSize": 16326,
+		"inputAbbreviatedPath": "\/upload\/0\/20170124111803_1_thumb-funding-angels-2.png",
+		"outputAbbreviatedPath": "\/upload\/0\/20170124111803_1_thumb-funding-angels-2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

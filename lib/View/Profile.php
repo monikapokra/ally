@@ -9,9 +9,10 @@ class View_Profile extends View {
 			// $this->add('View')->set('Please select');
 			return;
 		}
-		
+
 		$model = $this->add('Model_Person')->load($id);
 		$this->setModel($model);
+
 	}
 
 	function defaultTemplate(){

@@ -21,15 +21,15 @@ class Frontend extends ApiFrontend {
         $m->addItem('Home','index');
         $m->addItem('About','about');
         $m->addItem('Event','event');
-        $m->addItem('Help','help');
+        // $m->addItem('Help','help');
 
         
-        $auth = $this->add('Auth');
-        $auth->allowPage(['index','about','registration']);
+        $auth = $this->add('MyAuth');
+        $auth->allowPage(['index','about','registration','forgotpassword']);
         $auth->setModel('Person','email','password');
-        $auth->addHook('createForm',function($a,$p){
-           $p->add('View')->set('New User Registration Click Here')->addStyle('cursor','pointer')->js('click')->univ()->redirect('registration');
-        });
+        // $auth->addHook('createForm',function($a,$p){
+        //    $p->add('View')->set('New User Registration Click Here')->addStyle('cursor','pointer')->js('click')->univ()->redirect('registration');
+        // });
         $auth->check();
 
         if($auth->isLoggedIn()){

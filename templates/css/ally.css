@@ -1,3 +1,9 @@
+.atk-content {
+  width: 80% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .allymenu{
   color : white;
   background-color: purple;

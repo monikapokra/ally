@@ -25,23 +25,20 @@
     <!--[if lt IE 7]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
+
     {Layout}
     <div class="atk-layout">
       <div class="atk-layout-row">
-        <div class="atk-wrapper atk-cells">
-          <div class= "atk-row">
-              <div class="atk-cell atk-valign-middle" style="float:left">
-                <img src="templates/images/finaltop.jpg" style="width: 100%;"></div>
-              </div>
-          </div>
-        </div> 
-        <div class="atk-wrapper atk-cells allymenu">
-          <div class="atk-cell atk-cells-gutter-large allybuttoncolor">{$Menu}</div>
-        </div>  
-        <div class="row">
-          <div class="atk-wrapper">{$Content}</div>
+        <img src="templates/images/finaltop.jpg" style="width: 100%;">
+        <div class="atk-wrapper atk-padding-small atk-cells allymenu">
+          <div class="atk-cell atk-jackscrew atk-align-right allybuttoncolor">{$Menu}</div>
         </div>
-        <div class="ally-link-footer" style=" margin-top:100px; background-image: url(templates/images/bottom.jpg); background-size: 100% 100%;">
+      </div>
+      <div class="atk-layout-row atk-layout-fluid">
+        <div class="atk-wrapper atk-content" style="padding-top: 20px">{$Content}</div>
+      </div>
+      <div class="atk-layout-row">
+        <div class="ally-link-footer" style=" margin-top:100px; background-color: rgb(0,0,0); background-size: 100% 100%;">
             <div class= "container">
                 <div class= "row">
                     <div class="col-md-3">
@@ -80,12 +77,11 @@
                 </div>
             </div>
         </div>
-      <div class="atk-layout-row">
-        <div class="atk-wrapper atk-align-center atk-size-kilo atk-cells">
-          <a href="https://www.mlsu.ac.in">www.mlsu.ac.in </a>| © copyright2017.
-        </div>
-      </div>
+
+        <div class="atk-wrapper atk-padding-small atk-align-center atk-size-milli">This system is implemented using&nbsp;<a href="http://agiletoolkit.org/">Agile Toolkit</a>. © 1999–2014 Agile Toolkit Limited.&nbsp;<a href="http://agiletoolkit.org/about/license">See License</a></div>
       </div>
     </div>{/}
+
+
   </body>  
 </html>
