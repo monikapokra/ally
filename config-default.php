@@ -10,3 +10,6 @@ $config['url_postfix']='';
 
 
 $config['dsn']='mysql://root:@localhost/ally';
+
+$config['tmail']['transport']='Echo';
+$config['tmail']['from']='no-reply@mlsualumni.com';

@@ -1399,6 +1399,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/templates\/images\/bgimage.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 149601,
+		"inputAbbreviatedPath": "\/templates\/images\/bgimage.jpg",
+		"outputAbbreviatedPath": "\/templates\/images\/bgimage.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/templates\/images\/bottom.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1453,6 +1464,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/templates\/mail\/forgotpassword.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/templates\/mail\/forgotpassword.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/templates\/page\/dashboard.html": {
 		"fileType": 8192,

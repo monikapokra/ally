@@ -1,26 +1,28 @@
-.container
+.container(style='margin-top: 50px' id="{$_name}")
   .row
-      #myCarousel.carousel.slide
-        // Dot Indicators
-        ol.carousel-indicators
-          li.active(data-target='#myCarousel', data-slide-to='0')
-          |     
-          li(data-target='#myCarousel', data-slide-to='1')
-          |     
-          li(data-target='#myCarousel', data-slide-to='2')
-        // Items
-        .carousel-inner
-          .active.item
-            img.img-responsive(src='templates/images/collage.jpeg')
-          |     
-          .item
-            img.img-responsive(src='templates/images/mlsu.jpeg')
-          |     
-          .item
-            img.img-responsive(src='templates/images/vb.jpeg')
-        // Navigation
-        a.left.carousel-control(href='#myCarousel', data-slide='prev')
-          span.glyphicon.glyphicon-chevron-left
-        |         
-        a.right.carousel-control(href='#myCarousel', data-slide='next')
-          span.glyphicon.glyphicon-chevron-right
+    #myCarousel.carousel.slide(data-ride='carousel', data-interval='3500')
+      // Dot Indicators
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      // Items
+      .carousel-inner
+        .active.item
+          img.img-responsive(src='templates/images/collage.jpeg')
+        .item
+          img.img-responsive(src='templates/images/mlsu.jpeg')
+        .item
+          img.img-responsive(src='templates/images/vb.jpeg')
+      // Navigation
+      a.left.carousel-control(href='#myCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.right.carousel-control(href='#myCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+.container
+  br
+  p Ally is an effort to put back friends in connection. We miss our college days, and you ?
+script(type='text/javascript').
+  $(document).ready(function() {
+  $('.carousel').carousel({interval: 3500});
+  });

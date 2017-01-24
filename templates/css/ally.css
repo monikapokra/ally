@@ -35,6 +35,10 @@
     width: 100%;
 }
 
+body {
+  /*background-image: url('../images/bgimage.jpg');*/
+}
+
 .gradient {
 
   /* can be treated like a fallback */
