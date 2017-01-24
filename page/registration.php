@@ -3,7 +3,9 @@
 		function init(){
 			parent::init();
 
+
 			$m = $form = $this->add('Form',null,'form');
+			$m->addClass('registration_module');
 			$person = $this->add('Model_Person');
 
 			$m->setModel($person,['type','name','email','enrollment_no','password']);

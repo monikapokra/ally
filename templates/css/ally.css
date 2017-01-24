@@ -2,8 +2,40 @@
   /*width: 80% !important;*/
   margin-left: auto;
   margin-right: auto;
-  /*background-image: url('../images/bgimage.jpg');*/
   min-height: 500px;
+  /*background-color: rgba(255,255,255,0.9);*/
+  border-radius: 5px;
+}
+
+body {
+  background-image: url('../images/bg.jpg');
+  background-repeat: repeat-x;
+}
+
+.bgimage{
+  /*background-image: url('../images/bgimage.jpeg');*/
+}
+
+.login_module {
+  background: rgba(255,255,255,0.6);
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.registration_module {
+  background: rgba(255,255,255,0.6);
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.login_module a {
+  color: black;
 }
 
 .allymenu{
@@ -35,14 +67,6 @@
 
 .allybody {
     width: 100%;
-}
-
-body {
-  /*background-image: url('../images/bgimage.jpg');*/
-}
-
-.bgimage{
-  background-image: url('../images/bgimage.jpg');
 }
 
 .gradient {
