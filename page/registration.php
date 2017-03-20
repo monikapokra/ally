@@ -31,7 +31,7 @@
 				$enm->addCondition('enrolled_mobile_no',$form['enrollment_mobile_no'])
 					->tryLoadAny();
 
-				if(!$enm->loaded())
+				if(!$enm->loaded() AND $form['type'] != 'Faculty')
 					$form->displayError('enrollment_mobile_no','This Mobile number does not exists');
 
 
