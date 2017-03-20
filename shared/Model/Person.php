@@ -26,6 +26,8 @@ class Model_Person extends Model_MyTable{
 		$this->addField('teaching_course');
 		$this->addField('is_admin')->type('boolean')->defaultValue(false)->system(true);
 
+		$this->addField('hash');
+
 		$this->hasMany('PersonCourse');
 
 		$this->addExpression('unread_message_count')->set(function($m,$q){
