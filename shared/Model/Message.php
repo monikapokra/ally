@@ -12,7 +12,7 @@ class Model_Message extends Model_MyTable {
 		$this->addField('message')->type('text');
 
 		$this->addField('created_at')->type('date')->defaultValue(date('Y-m-d'));
-		$this->addField('is_read')->type('boolean');
+		$this->addField('is_read')->type('boolean')->defaultValue(false);
 
 
 		$this->add('dynamic_model/Controller_AutoCreator');
