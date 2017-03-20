@@ -58,7 +58,7 @@ class page_dashboard extends Page {
 			$message['message'] = $m_form['message'];
 			$message->save();
 
-			$m_form->js(null,[$m_in_grid->js()->reload(),$m_sent_grid->js()->reload()])->univ()->successMessage('Message Sent')->execute();
+			$m_form->js(null,[$m_form->js()->reload(),$m_in_grid->js()->reload(),$m_sent_grid->js()->reload()])->univ()->successMessage('Message Sent')->execute();
 
 		}
 
