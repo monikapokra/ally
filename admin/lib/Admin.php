@@ -30,6 +30,7 @@ class Admin extends App_Frontend {
         $m->addItem('Faculty','faculty');
         $m->addItem('Event','event');
         $m->addItem('Enrollment','enrollment');
+        $m->addItem('Course','course');
        
 
     }
