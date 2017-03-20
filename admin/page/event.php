@@ -1,5 +1,6 @@
 <?php
-	class page_event extends Page{
+class page_event extends Page{
+	public $title="Events";
 	function init(){
 		parent::init();
 
