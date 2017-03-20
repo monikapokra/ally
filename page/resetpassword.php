@@ -1,28 +1,28 @@
 <?php
 
-class page_forgotpassword extends Page {
+class page_resetpassword extends Page {
 	
 	function init(){
 		parent::init();
 
 		$form = $this->add('Form');
-		$form->addField('email');
+		$form->addField('email')->set($this->app->stickyGET('email'));
+		$form->addField('otp')->set($this->app->stickyGET('otp'));
+		$form->addField('Password','new_password');
 
-		$form->addSubmit('Get Password');
+		$form->addSubmit('Reset Password');
 
 		if($form->isSubmitted()){
-			$model = $this->add('Model_Person')->debug()->tryLoadBy('email',$form['email']);
+			$model = $this->add('Model_Person')->tryLoadBy('email',$form['email']);
 			if(!$model->loaded()) $form->displayError('email','This is not a registered user');
 
-			$mail = $this->add('GiTemplate')->loadTemplate('mail/forgotpassword');
-			$mail->set($model->get());
+			if($model['otp'] !=$form['otp'])
+				$form->displayError('otp','Invalid OTP');
 
-			$tmail = $this->add('Tmail');
-			$tmail->set('subject','Password recovery email');
-			$tmail->setHTML($mail->render());
-			$tmail->send($form['email']);
+			$model['password'] = $form['new_password'];
+			$model->save();
 
-			$form->js()->reload()->univ()->successMessage('Please check your email')->execute();
+			$form->js()->reload()->univ()->redirect('login')->execute();
 		}
 	}
 }

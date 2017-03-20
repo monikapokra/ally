@@ -25,7 +25,7 @@ class Frontend extends ApiFrontend {
 
         
         $auth = $this->add('MyAuth');
-        $auth->allowPage(['index','about','registration','forgotpassword']);
+        $auth->allowPage(['index','about','registration','forgotpassword','resetpassword']);
         $auth->setModel('Person','email','password');
         $auth->addHook('createForm',function($a,$p){
            $p->js(true)->_selector('.atk-content')->addClass('bgimage');

@@ -26,7 +26,7 @@ class Model_Person extends Model_MyTable{
 		$this->addField('teaching_course');
 		$this->addField('is_admin')->type('boolean')->defaultValue(false)->system(true);
 
-		$this->addField('hash');
+		$this->addField('otp');
 
 		$this->hasMany('PersonCourse');
 
@@ -69,7 +69,7 @@ class Model_Person extends Model_MyTable{
 			throw $this->exception('Email is not valid','ValidityCheck')->setField('email');
 
 
-		if($this['type']==='Student'){
+		if($this['type']==='Student' AND $this->loaded() AND $this['enrollment_mobile_no'] ){
 			$old_student = $this->add('Model_Person')
 								->addCondition('enrollment_mobile_no',$this['enrollment_mobile_no'])
 								->addCondition('id','<>',$this->id)
