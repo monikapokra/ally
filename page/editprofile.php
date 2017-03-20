@@ -2,32 +2,35 @@
 
 class page_editprofile extends Page{
 	function init(){
-		parent::init();
+		parent::init();		
 
 		$tabs = $this->add('Tabs');
 		$profile_tab = $tabs->addTab('Profile');
 
 		$user= $this->add('Model_Person')->load($this->app->auth->model->id);
+		
 
 		$form  = $profile_tab->add('Form');
-		$form->setModel($user,['name','image_id','type','email','gender','dob','address','contact_nos','enrollment_no','teaching_course','password']);
+		$form->setModel($user,['name','image_id','type','email','gender','dob','address','contact_nos','teaching_course','password']);
 
 		$type_field = $form->getElement('type');
 		$type_field->js(true)->univ()->bindConditionalShow([
-			'Student'=>['enrollment_no'],
+			'Student'=>['enrollment_mobile_no'],
 			'Faculty'=>['teaching_course']
 			],'div.atk-form-row');
 
-		$form->getElement('enrollment_no')->setAttr('disabled',true);
+		// $form->getElement('enrollment_mobile_no')->setAttr('disabled',true);
 		$form->getElement('address')->validate('required');
 		
 		$form->addField('Password','re_password');
+
+		$form->getElement('name')->setFieldHint('Enrollment Mobile number is '. $user['enrollment_mobile_no']);
+
 		$form->addSubmit('Update');
 
 		if($form->isSubmitted()){
 			if($form['password'] != $form['re_password'])
 				$form->displayError('re_password','Password must match');
-			$form->model->getElement('enrollment_no')->destroy();
 			$form->save();
 			$form->js()->univ()->successMessage('Profile detail saved')->execute();
 		}

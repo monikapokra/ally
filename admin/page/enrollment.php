@@ -5,6 +5,6 @@ class page_enrollment extends Page {
 		parent::init();
 
 			$cnrollment_crud = $this->add('CRUD');
-			$cnrollment_crud->setModel('EnrollmentNo',['enrolled_no']);
+			$cnrollment_crud->setModel('EnrollmentMobileNo');
 	}
 } 

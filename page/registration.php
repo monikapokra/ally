@@ -8,14 +8,14 @@
 			$m->addClass('registration_module');
 			$person = $this->add('Model_Person');
 
-			$m->setModel($person,['type','name','email','enrollment_no','password']);
+			$m->setModel($person,['type','name','email','enrollment_mobile_no','password']);
 
 			$form->addField('Password','re_password');				
 			$type_field = $form->getElement('type');
 			$form->addSubmit('Submit');
 
 			$type_field->js(true)->univ()->bindConditionalShow([
-				'Student'=>['name','email','password','re_password','enrollment_no'],
+				'Student'=>['name','email','password','re_password','enrollment_mobile_no'],
 				'Faculty'=>['name','email','password','re_password']
 			],'div.atk-form-row');
 
@@ -23,9 +23,17 @@
 				if($form['password'] != $form['re_password'])
 					$form->displayError('re_password','Password must match');
 
-				if($form['type']=='Student' && !$form['enrollment_no'])
-					$form->displayError('enrollment_no','Please provide enrollment number.');
-				// check for enrollment number validity
+				if($form['type']=='Student' && !$form['enrollment_mobile_no'])
+					$form->displayError('enrollment_mobile_no','Please provide enrollment number.');
+				
+				// check for enrollment mobile number validity
+				$enm = $this->add('Model_EnrollmentMobileNo');
+				$enm->addCondition('enrolled_mobile_no',$form['enrollment_mobile_no'])
+					->tryLoadAny();
+
+				if(!$enm->loaded())
+					$form->displayError('enrollment_mobile_no','This Mobile number does not exists');
+
 
 				$form->save();
 				$form->js(null,$form->js()->univ()->redirect('dashboard'))->univ()->successMessage('Successfully registered')->execute();

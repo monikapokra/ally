@@ -25,7 +25,7 @@ class page_index extends Page {
 		// $m = $this->add('Model_Message');
 		// $this->add('CRUD')->setModel($m);
 
-		// $m = $this->add('Model_EnrollmentNo');
+		// $m = $this->add('EnrollmentMobileNo');
 		// $this->add('CRUD')->setModel($m);
 	}
 }

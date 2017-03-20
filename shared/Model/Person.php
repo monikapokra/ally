@@ -16,7 +16,7 @@ class Model_Person extends Model_MyTable{
 		$this->addField('dob')->type('date');
 		$this->addField('address')->type('text');
 		$this->addField('contact_nos');
-		$this->addField('enrollment_no');
+		$this->addField('enrollment_mobile_no');
 		$this->addField('current_employer');
 		$this->addField('post_name');
 		$this->addField('job_domain');
@@ -46,7 +46,7 @@ class Model_Person extends Model_MyTable{
 
 		$this->addHook('beforeSave',[$this,'validatData']);
 
-		// $this->add('dynamic_model/Controller_AutoCreator');
+		$this->add('dynamic_model/Controller_AutoCreator');
 	}
 
 	function validatData(){
@@ -67,13 +67,13 @@ class Model_Person extends Model_MyTable{
 			throw $this->exception('Email is not valid','ValidityCheck')->setField('email');
 
 
-		if($this['type']=='Student'){
+		if($this['type']==='Student'){
 			$old_student = $this->add('Model_Person')
-								->addCondition('enrollment_no',$this['enrollment_no'])
+								->addCondition('enrollment_mobile_no',$this['enrollment_mobile_no'])
 								->addCondition('id','<>',$this->id)
 								->tryLoadAny();
 			if($old_student->loaded()){
-				throw $this->exception('This enrollment number is already in system.','ValidityCheck')->setField('enrollment_no');
+				throw $this->exception('This enrollment number is already in system.','ValidityCheck')->setField('enrollment_mobile_no')->addMoreInfo('enrollment_mobile_no',$this['enrollment_mobile_no']);
 			}
 			
 		}

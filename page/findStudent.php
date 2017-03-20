@@ -38,7 +38,7 @@ class page_findStudent extends Page {
 			$s_m->addCondition('id',-1);
 		}
 
-		$s_grid->setModel($s_m,['name','enrollment_no','from_year','to_year']);
+		$s_grid->setModel($s_m,['name','enrollment_mobile_no','from_year','to_year']);
 
 		$s_grid->on('click','tr',function($js,$data){
 			if($_GET['profile_page']){	
@@ -46,7 +46,7 @@ class page_findStudent extends Page {
 				return [$js->_selector('.profile_view')->trigger('reload'),$this->js()->univ()->closeDialog()];
 			}else{
 				$student = $this->add('Model_Person')->load($data['id']);
-				$str = $student['name']. ' ('.$student['enrollment_no'].')';
+				$str = $student['name']. ' ('.$student['enrollment_mobile_no'].')';
 				return [$js->_selector('.selected_person')->html($str),$this->js()->_selector('.selected_person_id')->val($data['id']),$this->js()->univ()->closeDialog()];
 			}
 		});
