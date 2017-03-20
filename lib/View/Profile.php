@@ -7,6 +7,7 @@ class View_Profile extends View {
 		
 		if(!$id){
 			// $this->add('View')->set('Please select');
+			$this->template->trydel('info');
 			return;
 		}
 

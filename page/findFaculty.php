@@ -13,7 +13,7 @@ class page_findFaculty extends Page {
 		$form->addField('DropDown','course')->setEmptyText('Please select')->validate('required')->setModel('Course');
 		$form->addField('DropDown','year')->setEmptyText('Please select')->setValueList(['2012'=>'2012','2013'=>'2013','2014'=>'2014','2015'=>'2015','2016'=>'2016','2017'=>'2017']);
 
-		$form->addSubmit('Get Students');
+		$form->addSubmit('Get Faculties');
 		
 		$f_m = $this->add('Model_Faculty');
 		$f_c_j = $f_m->join('person_course.person_id');
