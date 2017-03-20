@@ -20,7 +20,7 @@ class Admin extends App_Frontend {
         $this->now = date('Y-m-d H:i:s',strtotime($this->recall('current_date',date('Y-m-d H:i:s'))));
 
 
-        $auth = $this->add('Auth');
+        $auth = $this->add('MyAuth');
         $auth->setModel('Admin','email','password');
         $auth->check();
 
@@ -31,6 +31,7 @@ class Admin extends App_Frontend {
         $m->addItem('Event','event');
         $m->addItem('Enrollment','enrollment');
         $m->addItem('Course','course');
+        $m->addItem('Logout','logout');
        
 
     }
