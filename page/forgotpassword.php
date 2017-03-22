@@ -22,7 +22,7 @@ class page_forgotpassword extends Page {
 
 			$mail->set('reset_url',$this->app->url('resetpassword',['otp'=>$model['otp'],'email'=>$model['email']])->absolute());
 
-			$tmail = $this->add('Tmail');
+			$tmail = $this->add('TMail');
 			$tmail->set('subject','Password recovery email');
 			$tmail->setHTML($mail->render());
 			$tmail->send($form['email']);
