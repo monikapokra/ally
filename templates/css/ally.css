@@ -13,7 +13,7 @@ body {
 }
 
 .bgimage{
-  /*background-image: url('../images/bgimage.jpeg');*/
+  background-image: url('../images/bgimage.jpeg');
 }
 
 .login_module {

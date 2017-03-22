@@ -48,7 +48,7 @@ class Model_Person extends Model_MyTable{
 
 		$this->addHook('beforeSave',[$this,'validatData']);
 
-		$this->add('dynamic_model/Controller_AutoCreator');
+		// $this->add('dynamic_model/Controller_AutoCreator');
 	}
 
 	function validatData(){
