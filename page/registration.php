@@ -34,6 +34,12 @@
 				if(!$enm->loaded() AND $form['type'] != 'Faculty')
 					$form->displayError('enrollment_mobile_no','This Mobile number does not exists');
 
+				$existing_person = $this->add('Model_Person');
+				$existing_person->tryLoadBy('enrollment_mobile_no',$form['enrollment_mobile_no']);
+
+				if($existing_person->loaded() && $form['type']==='Student'){
+					$form->displayError('enrollment_mobile_no','This Enrollment number is already registered');
+				}
 
 				$form->save();
 				$form->js(null,$form->js()->univ()->redirect('dashboard'))->univ()->successMessage('Successfully registered')->execute();
